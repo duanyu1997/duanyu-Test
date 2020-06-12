@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace= "bnzdybusinessdesc.mapper.CommodityDescMapper" >
+    <resultMap id ="CommodityDescInfoMap" type="bnzdybusinessdesc.entity.CommodityDesc">
+        <result column="item_id" property="itemId"/>
+        <result column="item_desc" property="itemDesc"/>
+        <result column="created" property="created"/>
+        <result column="updated" property="updated"/>
+    </resultMap>
+
+    <select id = "findAll" resultMap="CommodityDescInfoMap">
+        select item_id,item_desc,created,updated
+        from
+        tb_item_desc
+    </select>
+    <insert id="add" parameterType="bnzdybusinessdesc.entity.CommodityDesc">
+        insert into tb_item_desc(item_id,item_desc)
+        VALUES (#{itemId},#{itemDesc})
+    </insert>
+    <update id="update" parameterType="bnzdybusinessdesc.entity.CommodityDesc">
+        update tb_item_desc set item_desc=#{itemDesc}
+        where item_id=#{itemId}
+    </update>
+    <delete id="delete" parameterType="bnzdybusinessdesc.entity.CommodityDesc">
+        delete from tb_item_desc where item_id=#{itemId}
+    </delete>
+    <select id="queryById" resultMap="CommodityDescInfoMap" resultType="bnzdybusinessdesc.entity.CommodityDesc">
+        select
+        item_desc,
+        created,
+        updated
+        from
+        tb_item_desc where item_id=#{itemId}
+    </select>
+</mapper>

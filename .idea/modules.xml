@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bnz-commodity/bnz-commodity.iml" filepath="$PROJECT_DIR$/bnz-commodity/bnz-commodity.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bnz-commodity-desc/bnz-commodity-desc.iml" filepath="$PROJECT_DIR$/bnz-commodity-desc/bnz-commodity-desc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bnz-consumer/bnz-consumer.iml" filepath="$PROJECT_DIR$/bnz-consumer/bnz-consumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bnz-commodity/bnz-dy-business.iml" filepath="$PROJECT_DIR$/bnz-commodity/bnz-dy-business.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bnz-eureka/bnz-eureka.iml" filepath="$PROJECT_DIR$/bnz-eureka/bnz-eureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bnz-zuul/bnz-zuul.iml" filepath="$PROJECT_DIR$/bnz-zuul/bnz-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/duanyuTest.iml" filepath="$PROJECT_DIR$/.idea/duanyuTest.iml" />
+    </modules>
+  </component>
+</project>

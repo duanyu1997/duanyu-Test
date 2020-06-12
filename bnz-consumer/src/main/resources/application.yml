@@ -1,0 +1,15 @@
+server:
+  port: 8000
+eureka:
+  client:
+    service-url: # EurekaServer地址
+      defaultZone: http://127.0.0.1:10086/eureka
+spring:
+  application:
+    name: bnz-consumer
+ribbon:
+  ReadTimeout: 30000
+  ConnectTimeout: 30000
+feign:
+  hystrix:
+    enabled: true

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="bnz-commodity-desc" />
+        <module name="bnz-dy-business" />
+        <module name="bnz-zuul" />
+        <module name="bnz-commodity" />
+        <module name="bnz-eureka" />
+        <module name="bnz-consumer" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="bnz-commodity" target="1.8" />
+      <module name="bnz-commodity-desc" target="1.8" />
+      <module name="bnz-consumer" target="1.8" />
+      <module name="bnz-dy-business" target="1.8" />
+      <module name="bnz-eureka" target="1.8" />
+      <module name="bnz-zuul" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="bnz-commodity" options="-parameters" />
+      <module name="bnz-commodity-desc" options="-parameters" />
+      <module name="bnz-consumer" options="-parameters" />
+      <module name="bnz-dy-business" options="-parameters" />
+      <module name="bnz-eureka" options="-parameters" />
+      <module name="bnz-zuul" options="-parameters" />
+    </option>
+  </component>
+</project>

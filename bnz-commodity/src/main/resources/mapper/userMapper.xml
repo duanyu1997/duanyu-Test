@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+
+<mapper namespace= "cn.bnz.dy.dao.mapper.CommodityMapper" >
+    <resultMap id ="CommodityInfoMap" type="cn.bnz.dy.entity.Commodity">
+        <result column="id" property="id"/>
+        <result column="title" property="title"/>
+        <result column="sell_point" property="sellPoint"/>
+        <result column="price" property="price"/>
+        <result column="num" property="num"/>
+        <result column="barcode" property="barcode"/>
+        <result column="image" property="image"/>
+        <result column="cid" property="cid"/>
+        <result column="status" property="status"/>
+        <result column="created" property="created"  jdbcType="TIMESTAMP"/>
+        <result column="updated" property="updated" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <select id = "findAll" resultMap="CommodityInfoMap">
+        select
+        id,
+        title,
+        sell_point,
+        price,
+        num,
+        barcode,
+        image,
+        cid,
+        status,
+        created,
+        updated
+        from
+        tb_item
+    </select>
+    <select id="queryById" resultMap="CommodityInfoMap">
+        select
+        id,
+        title,
+        sell_point,
+        price,
+        num,
+        barcode,
+        image,
+        cid,
+        status,
+        created,
+        updated
+        from
+        tb_item where id=#{id}
+    </select>
+    <insert id="add" parameterType="cn.bnz.dy.entity.Commodity">
+        insert into tb_item(id,title,sell_point,price,num,cid,status,created,updated)
+        VALUES (#{id},#{title},#{sellPoint},#{price},#{num},#{cid},#{status},#{created,jdbcType=TIMESTAMP},#{updated,jdbcType=TIMESTAMP})
+    </insert>
+    <update id="update" parameterType="cn.bnz.dy.entity.Commodity">
+        update tb_item set title=#{title},sell_point=#{sellPoint},price=#{price},num=#{num},cid=#{cid},status=#{status},created=#{created,jdbcType=TIMESTAMP},updated=#{updated,jdbcType=TIMESTAMP}
+        where id=#{id}
+    </update>
+    <delete id="delete" parameterType="cn.bnz.dy.entity.Commodity">
+        update tb_item set  status=3 where id=#{id} and status = 1
+    </delete>
+</mapper>
